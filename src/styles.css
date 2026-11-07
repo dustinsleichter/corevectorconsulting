@@ -3,3 +3,60 @@
 @media(max-width:860px){.site-header{height:72px}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#14101e;border-bottom:1px solid #45243c;padding:20px 28px 30px;align-items:stretch;flex-direction:column;gap:20px}.nav-links.open{display:flex}.nav-links>a{font-size:15px}.nav-mobile-cta{display:block}.desktop-cta{margin-left:auto}.menu-toggle{display:block}.hero-grid{grid-template-columns:1fr;gap:40px;padding:72px 0}.hero h1{font-size:clamp(45px,8vw,72px)}.hero-art{max-width:630px;margin:auto}.strip-content{flex-wrap:wrap;justify-content:center;padding:17px 0}.strip-content span:first-child{flex-basis:100%;justify-content:center}.service-grid{grid-template-columns:repeat(2,1fr)}.approach-grid,.audience-grid,.about-layout,.booking-grid,.contact-grid{grid-template-columns:1fr;gap:45px}.cta-panel{padding:48px;align-items:start;flex-direction:column}.footer-grid{gap:35px;grid-template-columns:1.6fr 1fr 1fr}}
 @media(max-width:550px){.container{width:min(100% - 36px,1180px)}.desktop-cta{display:none}.menu-toggle{margin-left:auto}.hero-grid{padding:58px 0}.hero h1{font-size:clamp(42px,11.5vw,63px)}.hero-copy>p{font-size:15px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{gap:12px}.section{padding:72px 0}.section-heading h2,.approach-band h2,.about-copy h2{font-size:36px}.service-grid,.full-service-grid{grid-template-columns:1fr}.service-card{min-height:initial;padding:23px}.approach-band{padding:72px 0}.audience-cards>div{padding:18px}.cta-section{padding-bottom:70px}.cta-panel{padding:32px 23px}.cta-panel .btn{width:100%}.footer-grid{grid-template-columns:1fr 1fr;gap:25px}.footer-grid>div:first-child{grid-column:span 2}.footer-bottom{flex-direction:column;margin-top:42px}.page-hero{padding:75px 0}.page-hero h1{font-size:44px}.full-service{padding:26px}.about-quote,.booking-card{padding:28px}.about-points{grid-template-columns:1fr}.contact-details{padding:26px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Original / Next-Gen theme switch: usable via touch, keyboard and mouse */
+.theme-switch{position:absolute;z-index:5;right:0;bottom:26px;display:flex;align-items:center;gap:5px;padding:6px;background:#0b0c1c;border:1px solid #4a4a72;border-radius:999px;box-shadow:0 14px 40px #0008;touch-action:manipulation}
+.theme-switch button{appearance:none;cursor:pointer;border:0;background:transparent;color:#c8c9e5;border-radius:999px;padding:13px 18px;min-height:44px;font-size:13px;font-weight:700;white-space:nowrap;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.theme-switch button.selected{background:linear-gradient(110deg,#ce1298,#f34d73 60%,#ff7939);color:#130b19}
+.theme-switch button:focus-visible{outline:3px solid white;outline-offset:3px}
+@media(max-width:860px){.hero-art{width:100%}.theme-switch{right:0;bottom:10px}}
+@media(max-width:550px){.theme-switch{right:0;bottom:7px}.theme-switch button{padding:12px 15px;font-size:12px}}
+
+/* Site-wide Next-Gen visual system: all routes inherit the selected theme. */
+html[data-theme="nextgen"]{background:#050d1b;color:#f1f9ff}
+html[data-theme="nextgen"] body{background:#050d1b}
+html[data-theme="nextgen"] ::selection{background:#4a61e7;color:#fff}
+html[data-theme="nextgen"] .site-header{background:rgba(4,12,29,.93);border-bottom-color:#23436a}
+html[data-theme="nextgen"] .nav-links{background-color:transparent}
+html[data-theme="nextgen"] .brand-symbol{border-color:#29cfff;background:linear-gradient(145deg,#0a456b,#17103d);color:#36d6ff;box-shadow:0 0 24px #22cfff33}
+html[data-theme="nextgen"] .brand-name span,html[data-theme="nextgen"] .footer-logo span{color:#56d6fa}
+html[data-theme="nextgen"] .nav-links>a:hover,html[data-theme="nextgen"] .nav-links>a.active{color:#61e5ff}
+html[data-theme="nextgen"] .btn-primary{background:linear-gradient(110deg,#00cce6,#4985fa 55%,#9561ff);box-shadow:0 12px 32px #2976ff40;color:#071424}
+html[data-theme="nextgen"] .btn-primary:hover{box-shadow:0 14px 40px #2f8fff65}
+html[data-theme="nextgen"] .btn-secondary{background:#0b1d34;border-color:#2f577a}
+html[data-theme="nextgen"] .btn-secondary:hover{border-color:#38d2f8}
+html[data-theme="nextgen"] .gradient-text{background:linear-gradient(100deg,#2bd8f5,#6b96ff 55%,#ac6aff);background-clip:text;-webkit-text-fill-color:transparent}
+html[data-theme="nextgen"] .eyebrow{color:#73cce8}
+html[data-theme="nextgen"] .eyebrow-line{background:linear-gradient(90deg,#24dcf8,#9068ff)}
+html[data-theme="nextgen"] .hero{background:radial-gradient(ellipse at 85% 41%,#11285a 0%,#090f29 48%,#050d1b 80%);border-bottom-color:#203b65}
+html[data-theme="nextgen"] .hero:before{background-image:linear-gradient(#23cdff13 1px,transparent 1px),linear-gradient(90deg,#23cdff13 1px,transparent 1px)}
+html[data-theme="nextgen"] .hero-orbit{border-color:#36cdff24}
+html[data-theme="nextgen"] .hero-proof svg{color:#36d7f5}
+html[data-theme="nextgen"] .hero-art img{border-color:#266f9f80;box-shadow:0 20px 130px #2c81ff35}
+html[data-theme="nextgen"] .art-glow{background:#3c8bff}
+html[data-theme="nextgen"] .pulse-dot{background:#32d7fa;box-shadow:0 0 12px #32d7fa}
+html[data-theme="nextgen"] .theme-switch button.selected{background:linear-gradient(110deg,#16cfed,#6797f8 60%,#9563f4);color:#061327}
+html[data-theme="nextgen"] .trust-strip{background:#0a172c;border-color:#1d3556}
+html[data-theme="nextgen"] .trust-strip svg{color:#55c9f5}
+html[data-theme="nextgen"] .service-card,html[data-theme="nextgen"] .full-service{background:linear-gradient(135deg,#111e39,#081528);border-color:#244366}
+html[data-theme="nextgen"] .service-card:hover{border-color:#37bdec;background:linear-gradient(135deg,#182d52,#0b1b33)}
+html[data-theme="nextgen"] .service-icon{background:linear-gradient(135deg,#10476b,#1a2757);color:#5cdaf7}
+html[data-theme="nextgen"] .card-arrow,html[data-theme="nextgen"] .text-link{color:#55d9fb}
+html[data-theme="nextgen"] .approach-band{background:radial-gradient(ellipse at 0 50%,#122d55,#071426 70%);border-color:#244366}
+html[data-theme="nextgen"] .approach-band h2 em,html[data-theme="nextgen"] .approach-steps span{color:#6bd7f7}
+html[data-theme="nextgen"] .approach-steps{border-color:#245b7d}
+html[data-theme="nextgen"] .approach-steps>div:before{border-color:#3acff7;background:#0d3150}
+html[data-theme="nextgen"] .audience-cards>div,html[data-theme="nextgen"] .contact-details{background:#0f2039;border-color:#254a70}
+html[data-theme="nextgen"] .audience-cards svg,html[data-theme="nextgen"] .contact-details svg,html[data-theme="nextgen"] .about-points svg,html[data-theme="nextgen"] .full-service li svg,html[data-theme="nextgen"] .check-list svg{color:#54d5fa}
+html[data-theme="nextgen"] .cta-panel{background:radial-gradient(ellipse at 100% 10%,#203d80,#101c47 60%,#09152b);border-color:#376aa2;box-shadow:0 10px 75px #287cfa20}
+html[data-theme="nextgen"] .footer{background:#050b17;border-color:#224063}
+html[data-theme="nextgen"] .footer-grid a:hover{color:#75ddff}
+html[data-theme="nextgen"] .page-hero{background:radial-gradient(ellipse at 70% 10%,#172c60,#0b1632 65%,#050d1b);border-color:#25456c}
+html[data-theme="nextgen"] .plain-note{background:#10213b;border-color:#244b71}
+html[data-theme="nextgen"] .about-quote{background:linear-gradient(135deg,#153f65,#0b1a35);border-color:#366796}
+html[data-theme="nextgen"] .quote-glyph,html[data-theme="nextgen"] .about-quote span{color:#68dbf9}
+html[data-theme="nextgen"] .booking-card{background:linear-gradient(135deg,#122b4c,#0a1930);border-color:#2f6192}
+html[data-theme="nextgen"] .booking-icon{background:#14456c;color:#6eddf8}
+html[data-theme="nextgen"] .booking-step>span{color:#64dbfa}
+html[data-theme="nextgen"] .pending-box{background:#142a43;border-color:#326185}
+@media(max-width:860px){html[data-theme="nextgen"] .nav-links,html[data-theme="nextgen"] .nav-links.open{background:#0b1a31;border-color:#28567b}}
