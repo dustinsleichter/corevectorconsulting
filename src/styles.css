@@ -60,3 +60,21 @@ html[data-theme="nextgen"] .booking-icon{background:#14456c;color:#6eddf8}
 html[data-theme="nextgen"] .booking-step>span{color:#64dbfa}
 html[data-theme="nextgen"] .pending-box{background:#142a43;border-color:#326185}
 @media(max-width:860px){html[data-theme="nextgen"] .nav-links,html[data-theme="nextgen"] .nav-links.open{background:#0b1a31;border-color:#28567b}}
+
+/* CoreVector theme selector — navigation placement, not the hero artwork */
+.nav-theme-control{display:flex;align-items:center;flex-shrink:0;margin-left:2px}
+.nav-theme-control .theme-switch{position:static;right:auto;bottom:auto;box-shadow:none;padding:3px;gap:2px}
+.nav-theme-control .theme-switch button{min-height:36px;padding:8px 10px;font-size:11px}
+/* Keep the desktop header single-row and give the switch enough room. */
+@media (min-width:861px){
+  .nav-wrap{gap:15px}
+  .nav-links{gap:13px}
+  .nav-theme-control{margin-left:0}
+  .desktop-cta .btn{padding:10px 13px}
+}
+/* Hamburger menu: switch appears below the page links and above the booking CTA. */
+@media (max-width:860px){
+  .nav-theme-control{display:flex;width:100%;margin:0;padding-top:12px;border-top:1px solid rgba(255,255,255,.11)}
+  .nav-theme-control .theme-switch{width:100%;justify-content:space-between;max-width:380px}
+  .nav-theme-control .theme-switch button{flex:1;min-height:44px;padding:10px 14px;font-size:13px}
+}
